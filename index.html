@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <title>Clipboard.js</title>
+</head>
+
+<body>
+    <br>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3>Instalação NPM: </h3>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label>npm install clipboard.js --save</label>
+                                <br> Importe o arquivo JavaScript:
+                                <br>
+                                <code class="prettyprint">&lt;script src="node_modules/clipboard.js/dist/clipboard.min.js"&gt;&lt;/script&gt;</code>
+                                <br>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>Exemplo por HTML:</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <button class="btn btn-default" clipboard="Esse é um texto que foi copiado como exemplo | HTML" clipboard-success="alert('copiado')">
+                            Copiar
+                        </button>
+                    </div>
+                    <div class="col-md-8">
+                        HTML
+                        <pre><code class="prettyprint">&lt;button class="btn btn-default" 
+        clipboard="Esse é um texto que foi copiado como exemplo | HTML"
+        clipboard-success="alert('copiado')"
+        clipboard-error="alert('erro')"&gt;
+    Copiar
+&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>Exemplo por JavaScript:</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <button class="btn btn-default" onclick="copiar()">
+                            Copiar
+                        </button>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-12">
+                                HTML
+                                <pre><code class="prettyprint">&lt;button class="btn btn-default" 
+        onclick="copiar()"&gt;
+    Copiar
+&lt;/button&gt;</code></pre>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                JavaScript
+                                <pre><code class="prettyprint">function copiar() {
+    var success = function () {
+        alert('copiado');
+    }
+    var error = function () {
+        alert('erro');
+    }
+    Clipboard.copy('Esse é um texto que foi copiado como exemplo. | JavaScript', success, error);
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="dist/clipboard.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+    <script>
+
+        function copiar() {
+            var success = function () {
+                alert('copiado');
+            }
+            var error = function () {
+                alert('erro');
+            }
+            Clipboard.copy('Esse é um texto que foi copiado como exemplo. | JavaScript', success, error)
+        }
+
+    </script>
+
+</body>
+
+</html>
