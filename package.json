@@ -11,6 +11,10 @@
       "es2015"
     ]
   },
+  "repository": {	
+    "type": "git",
+    "url": "https://github.com/mateusmirandaalmeida/clipboard.js.git"
+  },
   "devDependencies": {
     "awesome-typescript-loader": "^3.2.3",
     "babel-core": "^6.18.2",
